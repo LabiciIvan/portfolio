@@ -32,7 +32,7 @@ export default function Footer () {
 	
 	return (
 		<Grid container sx={{height: '400px', bgcolor: grey[900]}} color='white' >
-			<Grid item xs={5} sx={{display: 'flex', height: '70%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+			<Grid item xs={12} md={5} sx={{display: 'flex', height: '70%', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
 				<Typography variant='h5' p={2}>Ways to connect</Typography>
 				{dataConnect.map((item) => {
 					return	<Link href={item.href} underline='none' sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ':hover': {color: grey[700]}}} color='white' key={item.id}>
@@ -41,11 +41,12 @@ export default function Footer () {
 							</Link>
 				})}
 			</Grid>
-			<Grid item xs={7} sx={{ height: '70%'}}>
+			<Grid item xs={0} md={7} sx={{ height: '70%'}}>
 			</Grid>
 			<Grid item xs={12} borderTop={2} borderColor={grey[800]} sx={{height: '30%'}}>
-				<Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'end', height: '100%'}}>
-					<Typography pb={2}>© All Rights Reserved 2023</Typography>
+				<Grid container sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', height: '100%'}}>
+					<Typography pb={2}>© All Rights Reserved 2024</Typography>
+					<Typography pb={2}>2023 - 2024</Typography>
 				</Grid>
 			</Grid>
 		</Grid>
