@@ -27,39 +27,39 @@ const Projects = () => {
 	return (
 	<Container disableGutters maxWidth='false' sx={{bgcolor: grey[200]}}>
 		<Grid container spacing={3} justifyContent='center'>
-			<Grid item xs={7}>
+			<Grid item xs={4} md={7}>
 				<Typography variant='h4' color='primary.main'>
 					Projects
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>
 				<Grid container>
-					<Grid item xs={2} sx={{display: 'flex', justifyContent: 'center'}}>
+					<Grid item xs={1} md={2} sx={{display: 'flex', justifyContent: 'center'}}>
 						<ArrowBackIcon onClick={() => setIndex('left')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem'}}/>
 					</Grid>
-					<Grid item xs={8} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+					<Grid item xs={10} md={8} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
 						{
 							dataProjects.map((item => { return <Paper color='red' key={item.id} sx={{display: 'flex', width: '20%', height: '10px', bgcolor: setIndicator(item.id)}}/>}))
 						}
 					</Grid>
-					<Grid item xs={2} sx={{display: 'flex', justifyContent: 'center'}}>
+					<Grid item xs={1} md={2} sx={{display: 'flex', justifyContent: 'center'}}>
 						<ArrowForwardIcon  onClick={() => setIndex('right')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem'}}/>
 					</Grid>
 				</Grid>
 			</Grid>
 			<Grid container justifyContent='center' pb={2} spacing={2}>
-				<Grid item xs={5} sx={{display: 'flex', justifyContent: 'end'}}>
+				<Grid item xs={12} md={5} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'end'}}}>
 					<img id='project-image' src={dataProjects[indexCollection]['src']} />
 				</Grid>
-				<Grid item xs={5}  >
-					<Typography>{dataProjects[indexCollection]['title']}</Typography>
-					<Box>{dataProjects[indexCollection]['tech'].map((tech) => {return <Chip variant='outlined' color='primary' label={tech} sx={{margin: 1}} key={tech}/>})}</Box>
+				<Grid item xs={12} md={5}  >
+					<Typography textAlign={{xs: 'center', md: 'start'}}>{dataProjects[indexCollection]['title']}</Typography>
+					<Box sx={{display: 'flex', flexDirection: 'row', justifyContent: {xs: 'center', md: 'start'}}}>{dataProjects[indexCollection]['tech'].map((tech) => {return <Chip variant='outlined' color='primary' label={tech} sx={{margin: 1}} key={tech}/>})}</Box>
 					<Paper>
 						{
-							dataProjects[indexCollection]['descriptions'].map((description) => {return <Typography variant='subtitle1' p={2} key={description}>{description}</Typography>})
+							dataProjects[indexCollection]['descriptions'].map((description) => {return <Typography variant='subtitle1' textAlign={{xs: 'center', md: 'start'}} p={{xs: 3, md: 2}} key={description}>{description}</Typography>})
 						}
 					</Paper>
-					<Box m={2}>
+					<Box m={2} sx={{display: 'flex', justifyContent: {xs: 'center', md: 'start'}}}>
 						<Chip sx={{marginRight: 1}} variant='outlined' label='GIT' clickable color='primary' component='a' href={dataProjects[indexCollection]['git']} icon={<GitHubIcon />}/>
 						<Chip variant='outlined' label='Try now' clickable color='primary' component='a' href={dataProjects[indexCollection]['try']} icon={<PlayCircleFilledWhiteIcon />}/>
 					</Box>

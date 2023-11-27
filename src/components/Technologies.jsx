@@ -14,12 +14,12 @@ const Technologies = () => {
 					</Grid>
 					<Grid item xs={10}>
 						<Grid container  spacing={3} justifyContent='center'>
-							<Grid item xs={4}>
+							<Grid item xs={12} md={4}>
 								<Card variant="outlined"  >
 									<CardContent>
 										<Typography gutterBottom variant="h5" borderBottom={2} borderColor={grey[300]}>Frontend</Typography>
 										<Grid container>
-											<Grid item xs={8}>
+											<Grid item xs={12} md={8}>
 												<ImageList rowHeight={50} cols={4}>
 													<ImageListItem>
 														<img src={dataTech.html} style={{width: '50px', height: '50px'}}/>
@@ -39,12 +39,12 @@ const Technologies = () => {
 									</CardContent>
 								</Card>
 							</Grid>
-							<Grid item xs={4}>
+							<Grid item xs={12} md={4}>
 								<Card variant="outlined">
 									<CardContent>
 										<Typography gutterBottom  variant="h5" borderBottom={2} borderColor={grey[300]}>Backend</Typography>
 										<Grid container>
-											<Grid item xs={10}>
+											<Grid item xs={12} md={10}>
 												<ImageList rowHeight={50} cols={4}>
 													<ImageListItem>
 														<img src={dataTech.php} style={{width: '50px', height: '50px'}}/>

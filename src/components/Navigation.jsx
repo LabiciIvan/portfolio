@@ -28,12 +28,12 @@ const Navigation = () => {
 			<AppBar color='transparent' position='static'>
 				<Toolbar >
 					<Grid container spacing={2} direction={'row'} justifyContent={'center'} alignItems={'center'} >
-						<Grid item xs={6}>
+						<Grid item xs={2} md={6}>
 						<BottomNavigation showLabels>
 								<BottomNavigationAction href='#home'sx={{color:'primary.main', '&:hover' : {color: 'secondary.main'}}} label='Home' icon={<HomeIcon/>}/>
 							</BottomNavigation>
 						</Grid>
-						<Grid item xs={6}>
+						<Grid item xs={10} md={6}>
 							<BottomNavigation showLabels>
 								<BottomNavigationAction href='#projects' sx={{color: 'primary.main', '&:hover' : {color: 'secondary.main'}}} label='Projects' icon={<ViewListIcon/>}/>
 								<BottomNavigationAction href='#technology' sx={{color:'primary.main', '&:hover' : {color: 'secondary.main'}}} label='Technologies' icon={<TerminalIcon />}/>
