@@ -35,15 +35,15 @@ const Projects = () => {
 			<Grid item xs={12}>
 				<Grid container>
 					<Grid item xs={1} md={2} sx={{display: 'flex', justifyContent: 'center'}}>
-						<ArrowBackIcon onClick={() => setIndex('left')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem'}}/>
+						<ArrowBackIcon onClick={() => setIndex('left')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem', ml: 3}}/>
 					</Grid>
-					<Grid item xs={10} md={8} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+					<Grid item xs={10} md={8} sx={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
 						{
-							dataProjects.map((item => { return <Paper color='red' key={item.id} sx={{display: 'flex', width: '20%', height: '10px', bgcolor: setIndicator(item.id)}}/>}))
+							dataProjects.map((item => { return <Paper color='red' key={item.id} sx={{display: 'flex', width: {xs: '17%', md: '20%'}, height: {xs: '7px', md: '10px'}, bgcolor: setIndicator(item.id)}}/>}))
 						}
 					</Grid>
 					<Grid item xs={1} md={2} sx={{display: 'flex', justifyContent: 'center'}}>
-						<ArrowForwardIcon  onClick={() => setIndex('right')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem'}}/>
+						<ArrowForwardIcon  onClick={() => setIndex('right')} sx={{':hover': {color: 'primary.main', cursor: 'pointer'}, fontSize: '3rem', mr: 3}}/>
 					</Grid>
 				</Grid>
 			</Grid>
