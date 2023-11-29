@@ -25,7 +25,7 @@ const Projects = () => {
 	}
 
 	return (
-	<Container disableGutters maxWidth='false' sx={{bgcolor: grey[200]}}>
+	<Container id='projects' disableGutters maxWidth='false' sx={{bgcolor: grey[200]}}>
 		<Grid container spacing={3} justifyContent='center'>
 			<Grid item xs={4} md={7}>
 				<Typography variant='h4' color='primary.main'>
