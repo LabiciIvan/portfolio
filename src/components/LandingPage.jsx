@@ -7,7 +7,7 @@ import { grey } from "@mui/material/colors";
 const LandingPage = () => {
 
 	return (
-		<Container disableGutters >
+		<Container disableGutters sx={{mt: {xs: '60px', md: '0px'}}}>
 			<Grid container id='home' spacing={2} sx={{ height: {xs: '75vh', md: '80vh'}}}>
 				<Grid item xs={12} md={6} container justifyContent={'center'} alignItems={'center'} >
 					<Box>
